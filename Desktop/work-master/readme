@@ -1,0 +1,24 @@
+121.242.232.164
+210.18.140.117
+10.9.88.4
+
+#Create Virtual Env
+
+virtualenv -p /usr/bin/python3.6 ~/virtualenvs/myenv
+$  source /home/admin1/virtualenvs/myenv/bin/activate
+
+(venv_devopspy) nahmed@localhost:~$
+
+#Run in Virtual Env
+FLASK_APP=/home/admin1/virtualenvs/hello.py flask run --host=0.0.0.0
+FLASK_APP=/home/admin1/virtualenvs/basic-api1.py flask run --host=0.0.0.0
+
+
+curl -H "Content-Type: application/json" -X POST -d '{"name": "xyz", "address" : "123 XyZ"}' http://0.0.0.0:5000
+
+
+
+
+netstat -lnpt #listening port with PID
+
+pip3 install Flask-RESTful
